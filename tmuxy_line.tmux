@@ -2,7 +2,9 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 tmuxy_line_window_format="#($CURRENT_DIR/scripts/tmuxy_line_windows.sh)"
+tmuxy_line_window_format="this is a test"
 tmuxy_line_window_format_interpolation_string="\#{tmuxy_line_window_format}"
+
 do_interpolation() {
 	local string="$1"
 	local interpolated="${string/$tmuxy_line_window_format_interpolation_string/$tmuxy_line_window_format}"
@@ -17,7 +19,8 @@ update_tmux_option() {
 }
 
 main() {
-	update_tmux_option "status-right"
-	update_tmux_option "status-left"
+  update_tmux_option "window-status-format"
+  update_tmux_option "status-right"
+  update_tmux_option "status-left"
 }
 main
