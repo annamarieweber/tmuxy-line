@@ -2,7 +2,7 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 tmuxy_line_window_format="#($CURRENT_DIR/scripts/tmuxy_line_windows.sh)"
-tmuxy_line_window_format_interpolation_string="#{tmuxy_line_window_format}"
+tmuxy_line_window_format_interpolation_string="\#{tmuxy_line_window_format}"
 
 get_tmux_option() {
 	local option=$1
